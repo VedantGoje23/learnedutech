@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Learnedutech.com</title>
+		<link rel="icon" href="https://images6.fanpop.com/image/photos/43700000/The-Letter-L-the-letter-l-43702150-253-253.jpg" >
+		
+<!--bootstrap css		-->
+<!--bootstrap css		-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
+<!--google fonts-->
+<!--google fonts-->
+<!--font-family: 'Anton', sans-serif;-->
+<!--font-family: 'Dancing Script', cursive;-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--owl carousel	-->
+<!--owl carousel	-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--font awesome-->
+<!--font awesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		<style>
+			.custom-shape-divider-bottom-1638865489 {
+/*
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    line-height: 0;
+	top:70vh;
+*/
+    width: 99.9%;
+	margin-top: -145px;
+}
+
+.custom-shape-divider-bottom-1638865489 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 149px;
+}
+
+.custom-shape-divider-bottom-1638865489 .shape-fill {
+    fill: #ffff;
+}
+
+			.uploadbtn{
+				background-color: black; border: 1px solid red; border-radius: 5px; color: red
+			}
+			.uploadbtn:hover{
+				color: white;
+				background-color: red;
+				transform: scale(1.1);
+				
+			}
+			.curveHeading{
+				color: white; padding-top: 80px; font-size: 70px; text-align: center;font-family: 'Anton', sans-serif; text-shadow: 0 0 10px red; width: 95%;
+			}
+			.curveSubheading{
+				text-align: center; color: orangered; font-size: 50px;font-family: 'Dancing Script', cursive; width:95%;
+			}
+			.curveUpload{
+				color: red; text-align: center; font-size: 30px;
+			}
+
+			@media(max-width:730px){
+				.curveSubheading{
+					font-size: 40px;					
+				}
+				.curveUpload{
+					font-size: 20px;
+				}
+			}
+			@media(max-width:510px){
+				.curveHeading{
+					padding-top: 100px;
+					font-size: 50px;
+				}
+				.curveSubheading{
+					font-size: 30px;					
+				}
+				.curveUpload{
+					font-size: 20px;
+				}
+			}
+			@media(max-width:360px){
+				.curveHeading{
+					padding-top: 100px;
+					font-size: 45px;
+				}
+				.curveSubheading{
+					font-size: 25px;					
+				}
+				.curveUpload{
+					font-size: 15px;
+				}
+			}
+			.sectionbtn{
+				border-radius: 5px;
+				text-align: center; 
+				font-size: 32px;
+				color: white;
+				word-wrap: break-word;
+			}
+			.sectionbtn:hover{
+				box-shadow: 5px 5px 10px black;
+				transform: scale(1.01);
+			}
+			@media (max-width:775){
+				.sectionbtn{
+					font-size: 25px;
+				}
+			}
+			.h3Heading{
+				font-weight: bolder;
+				color: darkslategray;
+			}
+			#uploadModals{
+				display: none;
+			}
+			
+			::placeholder{
+				color: white;
+			}
+			
+			.modalback{
+				position: absolute;
+				top: 5vh;
+				border: 2px solid gray;
+				border-radius: 6px;
+				z-index: 90;
+			}
+			#closemodal{
+				color: white; cursor: pointer;
+			}
+			#closemodal:hover{
+				color: red;
+			}
+			#postpdf{
+				border-radius: 10px; border: 1px solid green; background-color: rgba(0,255,0,0.5); margin-left: 50%; transform: translateX(-50%);
+				color: white;
+			}
+			#postpdf:hover{
+				box-shadow: 2px 2px 5px green;
+				background-color: black;
+				color: green;
+			}
+			
+			.wrapperSlider{
+				width:100%;
+			}
+			.wrapperSlider .carousel{
+				position: relative;
+				max-width: 95%;
+				margin: auto;
+				padding: 0 60px;
+			}
+			
+			
+			
+			#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c11{
+				font-weight: bolder;
+				height:250px;
+			}
+			#c1:hover, #c2:hover, #c3:hover, #c4:hover, #c5:hover, #c6:hover, #c7:hover, #c11:hover{
+				transform: scale(1.02);
+				box-shadow: 8px 8px 15px black;
+			}
+			#c1{
+				background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1215151032%2F960x0.jpg%3Ffit%3Dscale");
+				backdrop-filter: blur(10px);				
+			}
+			#c2{
+				background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn1SMucYSSPjC3Mse96aIhW4_JsEYF1hBqmg&usqp=CAU");
+				backdrop-filter: blur(10px);				
+			}
+			#c3{
+				background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckts9RqxfpqqhH5kx6wdxSJX5vDKU6pVBzA&usqp=CAU");
+				backdrop-filter: blur(10px);				
+			}
+			#c4{
+				background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXK_gCe23AdK9oY98y7q-UkgsJgEpZG1rM0g&usqp=CAU");
+				backdrop-filter: blur(10px);				
+			}
+			#c5{
+				background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHhlAQ2aNi5-PcHhD3xbMtgj2Yy5QeXZnJyg&usqp=CAU");
+				backdrop-filter: blur(10px);				
+			}
+			#c11{
+				background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_gMlqwcIRBRfBKfoYOYZzeeSzkZK4JTwkA&usqp=CAU");
+				backdrop-filter: blur(10px);				
+			}
+			.owl-dots{
+				text-align:center;
+				margin-top: 0px;
+			}
+			.owl-dot{
+				height: 10px; 
+				width:10px;
+				border-radius: 50%;
+				cursor: pointer;
+				outline: none;
+				margin: 0 5px;
+				border: 2px solid #212152 !important;
+				transition: all 0.3s ease;
+			}
+			.owl-dot:hover, .owl-dot.active {
+				background-color: rgba(100,0,0,0.9) !important;
+			}
+			.owl-prev, .owl-next{
+				position: absolute;
+				top:40%;
+				font-size: 25px !important;
+			}
+			.owl-prev{
+				left: 30px;
+			}
+			.owl-next{
+				right: 30px;
+			}
+			.btn{
+				background-color: transparent;
+				border: 2px solid white;
+				color: white;
+				font-weight: bolder;
+				backdrop-filter: blur(15px);
+			}
+
+			.footer{
+				background-color:rgba(1,1,1,0.8);
+				color: white;
+			}
+			.footer .rowIn i:hover {
+				transform: scale(1.2);
+				font-size: 25px;
+			} 
+			.footer .rowIn i {
+				font-size: 25px;
+				margin: 10px;
+			} 
+			
+			.navbar{
+				background-color: black;
+				box-shadow: 0px 0.5px 15px white;
+			}
+		</style>
+		<script>
+			function uploadModal(){
+				document.getElementById("uploadModals").style.display="block"
+			}
+			function closeUploadModal(){
+				document.getElementById("uploadModals").style.display="none"
+			}
+			function showAltert(){
+				alert("On the click it will download or preview the notes in Pdf format");
+			}
+			function showSectionAltert(){
+				alert("On the click it will land to the page having only specific standard books");
+			}
+		</script>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Learnedutech</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Class
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Primary(1-4)</a></li>
+            <li><a class="dropdown-item" href="#">High(5-10)</a></li>
+            <li><a class="dropdown-item" href="#">College(11-12)</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+		
+		<div style="background-color: black; width: 100%; height:560px; margin-top: -60px;">
+			<div class="curvewrapper">
+			<div class="curveHeading">
+				Share your notes
+			</div>
+			<p class="curveSubheading">Download and upload the notes taken by others for your guidance</p>
+			<p class="curveUpload">
+				Would you like to help others by uploading?
+				<button class="uploadbtn" onclick="uploadModal()">Upload</button>
+			</p>
+			</div>
+		</div>
+		
+<div class="custom-shape-divider-bottom-1638865489">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+<!--upload modal-->
+<!--upload modal-->
+		<div class="d-flex justify-content-center" >
+			<div id="uploadModals" class="col-10 modalback" style="backdrop-filter: blur(50px); background-color: rgba(1,1,1,0.9)">
+				<div class="d-flex pt-4 pb-3">
+					<h3 class="col-10 text-center" style="color: white;">Upload your notes</h3>
+					<h2 class="text-center col-2" id="closemodal" onclick="closeUploadModal()">X</h2>
+				</div>
+				
+			  <div >
+					<p style="color:orangered; font-size:25px; margin-left: 5%;">Mediun/Board :</p>
+					<input type="text" style="width: 90%; margin-left: 5%; ;border-radius:6px; font-size:20px; color:white; height:35px; background-color:  #666666; border:none; " placeholder="State board" />
+				
+					<p style="color:orangered; font-size:25px; margin-left: 5%;">Class :</p>
+					<input type="number" style="width: 90%; margin-left: 5%; ;border-radius:6px; font-size:20px; color:white; height:35px; background-color:  #666666; border:none; " placeholder="1" />
+				
+					<p style="color:orangered; font-size:25px; margin-left: 5%;">Subject :</p>
+					<input type="text" style="width: 90%; margin-left: 5%; ;border-radius:6px; font-size:20px; color:white; height:35px; background-color:  #666666; border:none; " placeholder="Science" />
+				
+					<p style="color:orangered; font-size:25px; margin-left: 5%;">Chapter Number:</p>
+					<input type="number" style="width: 90%; margin-left: 5%; ;border-radius:6px; font-size:20px; color:white; height:35px; background-color:  #666666; border:none; " placeholder="1" />
+				
+					<p style="color:orangered; font-size:25px; margin-left: 5%;">Chapter Name:</p>
+					<input type="text" style="width: 90%; margin-left: 5%; ;border-radius:6px; font-size:20px; color:white; height:35px; background-color:  #666666; border:none; " placeholder="good habbits" />
+				
+					<p style="color:orangered; font-size:25px; margin-left: 5%;">Upload :</p>
+					<input type="file" accept="application/pdf" style="width: 90%; margin-left: 5%; ;border-radius:6px; font-size:20px; color:white; height:35px; background-color:  #666666; border:none; " placeholder="pdf..." />
+				  
+				  <button class="mt-3 mb-3 ps-3 pe-3 pt-1 pb-1" id="postpdf" style="">Post</button>
+				
+				  
+				</div>
+			</div>
+		</div>
+		
+		
+	<div class="container">
+		<h3 class="h3Heading">Section :-</h3>
+		<div class="row d-flex justify-content-center">
+		<button class="col-md-3 col-sm-5 col-xs-5 me-2 ms-2 pt-md-5 pb-md-5 mb-3 pt-sm-2 pb-sm-2 sectionbtn" onclick="showSectionAltert()" style="background-color: #ff3333;border:2px solid red;"><p>Primary(1-4 std)</p></button>
+<!--		<div class="col-1"></div>-->
+		<button class="col-md-3 col-sm-5 col-xs-5 me-2 ms-2 pt-md-5 pb-md-5 mb-3 pt-sm-2 pb-sm-2 sectionbtn" style="background-color: #4d4dff
+;border:2px solid blue;" onclick="showSectionAltert()"><p>High(5-10 std)</p></button>
+<!--		<div class="col-1"></div>-->
+		<button class="col-md-3 col-sm-8 me-md-2 ms-md-2 pt-md-5 pb-md-5 mb-3 pt-sm-2 pb-sm-2 sectionbtn" style="background-color:  #00b3b3;border:2px solid #004d4d;" onclick="showSectionAltert()"><p>College(11-12)</p></button>
+		</div>
+		
+		<h3 class="h3Heading">Primary :-</h3>
+			  <div class="wrapperSlider">
+				  <div class="carousel owl-carousel">
+					  
+					  <div class="card" id="c1">
+						  <h5 class="card-header text-light col-12 text-center">2nd Std (SB)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Science</h5>
+							<p class="card-text">Chapter No.:1</p>
+							<p class="card-text">Chapter:metals and non metals</p>
+							  
+
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c2">
+						  <h5 class="card-header text-light text-center">4th std (CBSE)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Maths</h5>
+							<p class="card-text">Chapter no:1</p>
+							<p class="card-text">Chapter: Basic arithmatics</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c3">
+						  <h5 class="card-header text-center text-light">3rd std std (SB)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: History</h5>
+							<p class="card-text">Chapter no: 6</p>
+							<p class="card-text">Chapter: Shivaji Maharaj</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c4">
+						  <h5 class="card-header text-center text-light">4th std(CBSE)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Geography</h5>
+							<p class="card-text">Chapter no: 5</p>
+							<p class="card-text">Chapter: Climate change</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card text-light" id="c5">
+						  <h5 class="card-header text-center">1st std (SB)</h5>
+						  <div class="card-body">
+							<h5 class="card-title">Sub: Value Edu</h5>
+							<p class="card-text">Chapter no: 3</p>
+							<p class="card-text">Chapter : Respect</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+
+					  
+				  </div>
+			  </div>
+		<h3 class="h3Heading">High :-</h3>
+		
+			  <div class="wrapperSlider">
+				  <div class="carousel owl-carousel">
+					  
+					  <div class="card" id="c1">
+						  <h5 class="card-header text-light col-12 text-center">7nd Std (SB)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Science</h5>
+							<p class="card-text">Chapter No.:1</p>
+							<p class="card-text">Chapter:Electricity</p>
+							  
+
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c2">
+						  <h5 class="card-header text-light text-center">6th std (CBSE)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Maths</h5>
+							<p class="card-text">Chapter no:1</p>
+							<p class="card-text">Chapter: Probablity</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c3">
+						  <h5 class="card-header text-center text-light">10th std (SB)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: History</h5>
+							<p class="card-text">Chapter no: 6</p>
+							<p class="card-text">Chapter: Panipat war</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c4">
+						  <h5 class="card-header text-center text-light">9th std(CBSE)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Geography</h5>
+							<p class="card-text">Chapter no: 5</p>
+							<p class="card-text">Chapter: Global warming</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card text-light" id="c5">
+						  <h5 class="card-header text-center">8th std (SB)</h5>
+						  <div class="card-body">
+							<h5 class="card-title">Sub: Value Edu</h5>
+							<p class="card-text">Chapter no: 3</p>
+							<p class="card-text">Chapter : Habbits</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+
+					  
+				  </div>
+			  </div>
+		<h3 class="h3Heading">College :-</h3>
+		
+			  <div class="wrapperSlider">
+				  <div class="carousel owl-carousel">
+					  
+					  <div class="card" id="c1">
+						  <h5 class="card-header text-light col-12 text-center">12th (PCB)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Biology</h5>
+							<p class="card-text">Chapter No.:1</p>
+							<p class="card-text">Organisms</p>
+							  
+
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c2">
+						  <h5 class="card-header text-light text-center">11th (PCM)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Maths</h5>
+							<p class="card-text">Chapter no:1</p>
+							<p class="card-text">Chapter: Derivatives</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c3">
+						  <h5 class="card-header text-center text-light">11th (Arts)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: History</h5>
+							<p class="card-text">Chapter no: 1</p>
+							<p class="card-text">Chapter: Freedom</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card" id="c4">
+						  <h5 class="card-header text-center text-light">12th (ARTS)</h5>
+						  <div class="card-body text-light">
+							<h5 class="card-title">Sub: Geography</h5>
+							<p class="card-text">Chapter no: 1</p>
+							<p class="card-text">Chapter: Regions</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+					  <div class="card text-light" id="c11">
+						  <h5 class="card-header text-center">12 (COM)</h5>
+						  <div class="card-body">
+							<h5 class="card-title">Sub: Tally</h5>
+							<p class="card-text">Chapter no:5</p>
+							<p class="card-text">Chapter : GDP</p>
+							<a href="#" class="btn btn-primary d-flex justify-content-center" onclick="showAltert()">PDF</a>
+						  </div>
+					</div>
+
+					  
+				  </div>
+			  </div>
+		
+		
+		
+		
+		
+		
+	</div>
+		
+		<br>
+<div class="footer text-center">
+	<br>
+	<h2>You can contact us on</h2>
+	<div class="rowIn">
+		<i class="fab fa-google-plus-square"></i>
+		<i class="fab fa-twitter"></i>
+		<i class="fab fa-facebook-square"></i>
+	</div><br>
+	<h4>copyright@2022</h4>
+	<br>
+</div>
+		
+		
+		
+<!--bootstrap script		-->
+<!--bootstrap script		-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		
+<!--carousal cdn js		-->
+<!--carousal cdn js		-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		
+<!--		owl carousal-->
+<!--		owl carousal-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		
+<script>
+	$(".carousel").owlCarousel({
+		loop:true,
+		margin:20,
+		autoplay:true,
+		autoplayHoverPause: true,
+		nav:true,
+		navText:["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+		responsive:{
+		0:{items:1,}, 600:{items:2,}, 1200:{items:3,}
+	}
+	})
+</script>
+	</body>
+</html>
